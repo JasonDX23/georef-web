@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Georeferencing Tool</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Map Georeferencing Tool</h1>
+        
+        <input type="file" id="imageUpload" accept="image/*">
+        
+        <div id="imageViewer"></div>
+        
+        <table id="coordsTable">
+            <thead>
+                <tr>
+                    <th>Point</th>
+                    <th>Image X</th>
+                    <th>Image Y</th>
+                    <th>Longitude</th>
+                    <th>Latitude</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        
+        <button id="georeference" disabled>Start Georeferencing</button>
+        
+        <div id="map"></div>
+        
+        <button id="download" disabled>Download Georeferenced TIF</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/geotiff@1.0.0-beta.7/dist/geotiff.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
